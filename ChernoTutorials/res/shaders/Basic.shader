@@ -7,10 +7,9 @@ layout(location = 1) in vec2 texCoord;
 out vec2 v_TexCoord;
 
 uniform mat4 u_MVP;
-uniform mat4 u_Transform;
 
 void main(){
-   gl_Position = u_MVP * u_Transform * position;
+   gl_Position = u_MVP * position;
    v_TexCoord = texCoord;
 }
 
