@@ -115,7 +115,7 @@ int main(void) {
 
         glm::mat4 transMatrix;
         transMatrix = glm::scale(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 1.0f));
-        shader.SetUniformMat4("u_Transform", transMatrix);
+        //shader.SetUniformMat4("u_Transform", transMatrix);
 
         Texture texture("res/textures/siriusBl4ckLogo.png");
         texture.Bind();
@@ -130,7 +130,7 @@ int main(void) {
 
         float r = 0.0f;
         float increment = 0.05f;
-        float speed = 0.1f;
+        float speed = 0.01f;
         float time = 0;
         glm::vec3 pos(0.0f, 0.0f, 0.0f);
 
@@ -161,12 +161,13 @@ int main(void) {
             dir = glm::vec3(0.0f, 0.0f, 0.0f);
             shader.SetUniformMat4("u_MVP", proj * transMatrix);
 
-            if (r >= 1.0f) {
-                increment = -0.025f;
+           /* if (r >= 1.0f) {
+                increment = -0.0025f;
             }
             else if (r <= 0.0f) {
-                increment = 0.025f;
-            }
+                increment = 0.0025f;
+            }*/
+            increment = 0.002f;
 
             r += increment;
 
