@@ -15,6 +15,7 @@ private:
 	//caching for uniforms
 	std::unordered_map<std::string, int> m_UniformLocationCache;
 public:
+	Shader() {}
 	Shader(const std::string& filename);
 	~Shader();
 

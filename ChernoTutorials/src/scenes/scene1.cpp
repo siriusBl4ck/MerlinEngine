@@ -4,12 +4,6 @@
 #include "../Renderer.h"
 
 namespace scene {
-	Scene1::Scene1()
-		:m_ClearColor {0.0f, 0.0f, 0.0f, 1.0f}
-	{
-
-	}
-
 	Scene1::~Scene1() {
 
 	}

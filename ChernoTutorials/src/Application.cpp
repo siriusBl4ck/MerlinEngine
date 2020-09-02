@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -13,6 +14,7 @@
 
 #include "scenes/scene1.h"
 #include "scenes/Scene2.h"
+#include "scenes/scene3.h"
 #include "scenes/MainScreen.h"
 
 const char* glsl_version = "#version 330 core";
@@ -51,7 +53,7 @@ int main(void) {
     const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());    
 
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(1280, 720, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(1280, 720, "MerlinEngine", NULL, NULL);
     if (!window) {
         glfwTerminate();
         return -1;
@@ -82,12 +84,11 @@ int main(void) {
         GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
         GLCall(glBindVertexArray(0));
 
-        scene::Scene1 scene1;
-        scene::Scene2 scene2;
-        scene::MainScreen mainscn;
+        scene::MainScreen mainscn(nullptr);
 
-        mainscn.AddToList(&scene1, "scn1");
-        mainscn.AddToList(&scene2, "scn2");
+        mainscn.BindScene<scene::Scene1>("scn1");
+        mainscn.BindScene<scene::Scene2>("scn2");
+        mainscn.BindScene<scene::Scene3>("modelLoad");
 
         bool show_demo_window = false;
         bool show_another_window = false;

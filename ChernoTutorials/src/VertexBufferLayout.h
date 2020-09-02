@@ -2,6 +2,7 @@
 #include<vector>
 #include<GL/glew.h>
 #include "ErrorLogging.h"
+#include "glm/glm.hpp"
 
 struct VertexBufferElement {
 	unsigned int count;
@@ -48,6 +49,12 @@ public:
 
 	template<>
 	void Push<unsigned char>(unsigned int count) {
+		m_Elements.push_back({ count, GL_UNSIGNED_BYTE, GL_TRUE });
+		m_Stride += count * VertexBufferElement::GetSizeOfType(GL_UNSIGNED_BYTE);
+	}
+
+	template<>
+	void Push<glm::vec3>(unsigned int count) {
 		m_Elements.push_back({ count, GL_UNSIGNED_BYTE, GL_TRUE });
 		m_Stride += count * VertexBufferElement::GetSizeOfType(GL_UNSIGNED_BYTE);
 	}

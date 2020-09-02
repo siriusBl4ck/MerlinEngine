@@ -1,12 +1,12 @@
 #include "Scene2.h"
 
 namespace scene {
-	Scene2::Scene2() {
+    Scene2::Scene2() {
+        name = "Scene2";
+    }
+    Scene2::~Scene2() {
 
-	}
-	Scene2::~Scene2() {
-
-	}
+    }
 
 	void Scene2::InitializeScene() {
         Renderer renderer;

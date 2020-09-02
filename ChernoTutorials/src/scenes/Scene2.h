@@ -16,6 +16,7 @@ namespace scene {
 	class Scene2 : public Scene
 	{
 	public:
+		//using Scene::Scene;
 		Scene2();
 		~Scene2();
 
