@@ -624,13 +624,6 @@
     <ClInclude Include="src\VertexBuffer.h" />
     <ClInclude Include="src\VertexBufferLayout.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\textures\siriusBl4ckLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="res\models\suzanne.obj" />
-    <Object Include="res\models\testcube.obj" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1417,13 +1417,4 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\textures\siriusBl4ckLogo.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="res\models\suzanne.obj" />
-    <Object Include="res\models\testcube.obj" />
-  </ItemGroup>
 </Project>
