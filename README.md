@@ -1,4 +1,5 @@
 # Merlin Engine
+A work in progess rasterized rendering engine using C++ and Modern OpenGL (GLFW, GLEW)
 OpenGL and Game Engine Dev
 This started as a follow through of some modern OpenGL (4.5) programmable pipeline tutorials I found.
 But slowly, I began to explore on my own, add some changes and try new things.
